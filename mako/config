@@ -1,25 +1,23 @@
+max-history=3
 sort=-time
 layer=overlay
-background-color=#11111baa
-width=300
+background-color=#11111bbb
 height=110
-border-size=2
-border-color=#880000
 border-radius=13
 icons=0
 max-icon-size=64
+font=JetBrains Mono 11
 default-timeout=5000
 ignore-timeout=1
-font=monospace 12
 
 [urgency=low]
-border-color=#ffffff
+border-color=#aaaaff
 
 [urgency=normal]
-border-color=#ddaa00
+border-color=#ffffff
 
-[urgency=high]
-border-color=#ab0000
+[urgency=critical]
+border-color=#eeee11
 default-timeout=0
 
 [category=mpd]

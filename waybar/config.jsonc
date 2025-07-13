@@ -2,14 +2,12 @@
     "position": "top", 
     "height": 30,
     "modules-center": ["hyprland/workspaces", "hyprland/language", "network", "pulseaudio", "battery", "custom/date", "clock"],
+    "modules-right": ["custom/media"],
     // Modules configuration
 	"hyprland/workspaces": {
 		"disable-scroll": true,
 		"all-outputs": true,
 		"format": "{icon}",
-	 	"persistent_workspaces": {
-			"*": 10
-	},
          	"format-icons": {
              		"1": "一",
              		"2": "二",
@@ -24,13 +22,13 @@
          }
      },
 	"custom/date": {
-    		"format": "󰸗 {}",
+    "format": "󰸗 {}",
 		"interval": 3600,
 		"exec": "$HOME/bin/waybar-date.sh"
 	},
 	"clock": {
 		"format": "󰅐 {:%H:%M} ",
-        	"tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
 	},
 	"battery": {
         	"states": {
@@ -49,13 +47,12 @@
         	"format-ethernet": "󰤮 ",
         	"format-linked": "{ifname} (No IP) ",
         	"format-disconnected": "󰤮 Disconnected",
-		//"tooltip-format-wifi": "Signal Strenght: {signalStrength}% | Down Speed: {bandwidthDownBits}, Up Speed: {bandwidthUpBits}",
+		"tooltip-format-wifi": "{essid} | Signal: {signalStrength}% | Down Speed: {bandwidthDownBits}, Up Speed: {bandwidthUpBits}",
 		"on-click": "~/.config/waybar/scripts/wifimenu.sh",
-		//"exec": "~/.config/waybar/scripts/wifiinfo.sh"
 	},
 	"pulseaudio": {
-		"on-click": "pactl set-sink-mute 45 toggle",
-		"format": "{icon}  {volume}%",
+		"on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+		"format": "{icon} {volume}%",
         	"format-muted": "󰖁 ",
         	"format-icons": {
             	"headphone": " ",
@@ -67,9 +64,20 @@
             	"default": ["", " ", " "]
         },
 	"hyprland/language": {
-		"format": "{short}",
-		"keyboard-name": "at-translated-set-2-keyboard",
-	       	"on-click": "hyprctl switchxkblayout at-translated-set-2-keyboard next"	
+		"format": "{}",
+		"format-en": "not goyda(",
+		"format-ru": "goyda!!!"
+		}
 	},
-    }
+	"custom/media": {
+		"format": "{text}",
+		"return-type": "json",
+    "max-length": 40,
+    "escape": true,
+    "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null",
+    "on-click": "playerctl play-pause",
+    "on-click-middle": "playerctl stop",
+    "on-scroll-down": "playerctl next",
+    "on-scroll-up": "playerctl previous"
+	},
 }

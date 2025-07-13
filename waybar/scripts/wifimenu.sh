@@ -24,7 +24,7 @@ x_pos_center=$((monRes[0] / 2))
 y_pos_center=$((monRes[1] / 2))
 
 # Rofi override to center window on screen
-r_override="window { anchor: center; x-offset: -${x_pos_center}px; y-offset: -${y_pos_center}px; border: ${hypr_width}px; border-radius: 15px; } wallbox { border-radius: 10px; } element { border-radius: 10px; }"
+r_override="window { anchor: center; x-offset: 0; y-offset: 0; border: ${hypr_width}px; border-radius: 15px; } wallbox { border-radius: 10px; } element { border-radius: 10px; }"
 
 # Notify the user about fetching Wi-Fi networks
 notify-send "Searching for available Wi-Fi networks..."

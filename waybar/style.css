@@ -1,7 +1,7 @@
 * {
     border: none;
     border-radius: 0;
-    font-family: mononoki Nerd Font;
+    font-family: Hanazono;
     font-size: 14px;
     min-height: 0;
 }
@@ -16,7 +16,7 @@ tooltip {
 	border-radius: 15px;
 	border-width: 2px;
 	border-style: solid;
-	border-color: #262626;
+	border-color: #0f0f0f;
 	}
 
 #workspaces button {
@@ -32,7 +32,7 @@ tooltip {
 
 #workspaces button.active {
     color: #0f0f0f;
-    background-color: #9ec3c4;
+    background-color: #f0f0f0;
     border-radius: 15px;
 }
 
@@ -42,34 +42,21 @@ tooltip {
 	border-radius: 15px;
 }
 
-#custom-date, #clock, #battery, #pulseaudio, #network, #workspaces, #language {
+#window, #custom-date, #clock, #battery, #pulseaudio, #network, #workspaces, #language, #custom-media {
 	background-color: #0f0f0f;
 	padding: 5px 10px;
 	margin: 5px 0px;
 }
 
 #workspaces {
-	background-color: #262626;
+	background-color: #0f0f0f;
 	border-radius: 15px 0px 0px 15px;
-	font-family: Hanazono Font;
-}
-
-#custom-date {
-	color: #9ec3c4;
+	font-family: mononoki Nerd Font;
 }
 
 #clock {
-    color: #a39ec4;
     border-radius: 0px 15px 15px 0px;
     margin-right: 10px;
-}
-
-#battery {
-    color: #9ec49f;
-}
-
-#battery.charging {
-    color: #9ec49f;
 }
 
 #battery.warning:not(.charging) {
@@ -78,10 +65,15 @@ tooltip {
 }
 
 #network {
-	color: #c4c19e;
 	border-radius: 0px 0px 0px 0px;
 }
 
-#pulseaudio {
-	color: #a5b4cb;
+#custom-media {
+    border-radius: 15px;
+    margin-right: 20px;
+    padding: 5px 15px;
+}
+
+#window {
+    background: #0f0f0f;
 }
