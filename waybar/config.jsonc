@@ -1,7 +1,8 @@
 {
     "position": "top", 
     "height": 30,
-    "modules-center": ["hyprland/workspaces", "hyprland/language", "network", "pulseaudio", "battery", "custom/date", "clock"],
+    "modules-left": ["custom/power"],
+    "modules-center": ["hyprland/workspaces", "hyprland/language", "network", "pulseaudio", "custom/date", "clock"],
     "modules-right": ["custom/media"],
     // Modules configuration
 	"hyprland/workspaces": {
@@ -28,7 +29,13 @@
 	},
 	"clock": {
 		"format": "󰅐 {:%H:%M} ",
-    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+    //"tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+    "tooltip-format": "<tt><small>{calendar}</small></tt>",
+    "calendar": {
+    	"format": {
+    		"today": "<span color='#bf57f7'><b>{}</b></span>"
+    	}
+    }
 	},
 	"battery": {
         	"states": {
@@ -48,7 +55,7 @@
         	"format-linked": "{ifname} (No IP) ",
         	"format-disconnected": "󰤮 Disconnected",
 		"tooltip-format-wifi": "{essid} | Signal: {signalStrength}% | Down Speed: {bandwidthDownBits}, Up Speed: {bandwidthUpBits}",
-		"on-click": "~/.config/waybar/scripts/wifimenu.sh",
+		"on-click": "~/.config/waybar/scripts/wifimenu.sh"
 	},
 	"pulseaudio": {
 		"on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
@@ -74,10 +81,15 @@
 		"return-type": "json",
     "max-length": 40,
     "escape": true,
-    "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null",
+    "exec": "$HOME/.config/waybar/mediaplayer.py 2>/dev/null",
     "on-click": "playerctl play-pause",
     "on-click-middle": "playerctl stop",
     "on-scroll-down": "playerctl next",
     "on-scroll-up": "playerctl previous"
 	},
+	"custom/power": {
+		"format": "⏻",
+    "on-click": "nwg-bar",
+    "on-click-right": "killall nwg-bar"
+	}
 }

@@ -42,7 +42,7 @@ tooltip {
 	border-radius: 15px;
 }
 
-#window, #custom-date, #clock, #battery, #pulseaudio, #network, #workspaces, #language, #custom-media {
+#window, #custom-date, #clock, #battery, #pulseaudio, #network, #workspaces, #language, #custom-media, #custom-power {
 	background-color: #0f0f0f;
 	padding: 5px 10px;
 	margin: 5px 0px;
@@ -72,6 +72,17 @@ tooltip {
     border-radius: 15px;
     margin-right: 20px;
     padding: 5px 15px;
+}
+
+#custom-power {
+    font-size: 20px;
+    border-radius: 15px;
+    margin-left: 20px;
+    padding: 5px 15px;
+}
+
+#custom-power:hover{
+    background-color: #7109aa
 }
 
 #window {
