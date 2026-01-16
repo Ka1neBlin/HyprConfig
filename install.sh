@@ -4,4 +4,4 @@ cp .zshrc ~
 mkdir -p ~/Pictures/Background
 cp background.png ~/Pictures/Background
 
-sudo pacman -S mako nvim rofi waybar swaybg amberol nautilus hyprshot obsidian
+sudo pacman -S mako neovim rofi waybar swaybg amberol nautilus hyprshot obsidian
