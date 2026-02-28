@@ -109,7 +109,7 @@ fi
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias arch-update="sudo pacman -Syu; notify-send \"Обновления системы получены!\" \"Перезагрузите устройство\""
+alias arch-update="(sudo pacman -Syu && notify-send \"Обновления системы получены!\" \"Перезагрузите устройство\") || notify-send -u critical \"Ошибка!\" \"Не удалось обновить систему!\""
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
