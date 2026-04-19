@@ -2514,6 +2514,6 @@ dynamic_background_opacity yes
 
 
 # BEGIN_KITTY_THEME
-# Noctalia
+# Kaolin Temple
 include current-theme.conf
 # END_KITTY_THEME

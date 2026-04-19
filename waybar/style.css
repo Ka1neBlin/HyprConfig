@@ -8,11 +8,11 @@
 
 window#waybar {
     background: transparent;
-    color: white;
+    color: #eedcc1;
 }
 
 tooltip {
-	background: #0f0f0f;
+	background: #2b2b2f;
 	border-radius: 15px;
 	border-width: 2px;
 	border-style: solid;
@@ -21,35 +21,35 @@ tooltip {
 
 #workspaces button {
     padding: 5px 10px;
-    color: #f0f0f0;
+    color: #eedcc1;
 }
 
 #workspaces button.focused {
     color: #0f0f0f;
-    background-color: #c49ec4;
+    background-color: #eedcc1;
     border-radius: 15px;
 }
 
 #workspaces button.active {
-    color: #0f0f0f;
-    background-color: #f0f0f0;
+    color: #2b2b2f;
+    background-color: #eedcc1;
     border-radius: 15px;
 }
 
 #workspaces button:hover {
-	background-color: #c49ec4;
+	background-color: #eedcc1;
 	color: #0f0f0f;
 	border-radius: 15px;
 }
 
 #window, #custom-date, #clock, #battery, #pulseaudio, #network, #workspaces, #language, #custom-media, #custom-power {
-	background-color: #0f0f0f;
+	background-color: #2b2b2f;
 	padding: 5px 10px;
 	margin: 5px 0px;
 }
 
 #workspaces {
-	background-color: #0f0f0f;
+	background-color: #2b2b2f;
 	border-radius: 15px 0px 0px 15px;
 	font-family: mononoki Nerd Font;
 }
@@ -61,7 +61,7 @@ tooltip {
 
 #battery.warning:not(.charging) {
     background-color: #c49ea0;
-    color: #0f0f0f;
+    color: #2b2b2f;
 }
 
 #network {
@@ -82,9 +82,9 @@ tooltip {
 }
 
 #custom-power:hover{
-    background-color: #7109aa
+    background-color: #ef6787
 }
 
 #window {
-    background: #0f0f0f;
+    background: #2b2b2f;
 }
